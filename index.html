@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1459a6">
+  <meta name="description" content="HandaHub helps households prepare for disasters with checklists, safety guides, and community information.">
+  <title>HandaHub | Be Ready. Stay Safe.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="HandaHub home">
+      <span class="brand-mark" aria-hidden="true">H</span>
+      <span><strong>HandaHub</strong><small>Be Ready. Stay Safe.</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-nav">☰ <span class="sr-only">Toggle navigation</span></button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="#home" data-page="home" class="nav-link active">Home</a>
+      <a href="#dashboard" data-page="dashboard" class="nav-link">Dashboard</a>
+      <a href="#checklist" data-page="checklist" class="nav-link">Go-Bag Checklist</a>
+      <a href="#guides" data-page="guides" class="nav-link">Safety Guides</a>
+      <a href="#centers" data-page="centers" class="nav-link">Evacuation Centers</a>
+      <a href="#contacts" data-page="contacts" class="nav-link">Emergency Contacts</a>
+      <a href="#about" data-page="about" class="nav-link">About</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section id="home" class="page-section">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="pulse-dot"></span> PREPAREDNESS STARTS AT HOME</span>
+          <h1>Be ready for the unexpected.</h1>
+          <p>Make a plan, prepare your emergency bag, and learn how to protect the people who matter most.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#checklist">Prepare your go-bag <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#guides">Explore safety guides</a>
+          </div>
+          <p class="small-note">Preparedness tools for learning and planning. This website is not an emergency alert service.</p>
+        </div>
+        <div class="hero-art" aria-label="Illustration of an emergency backpack and shield" role="img">
+          <div class="sun-shape"></div>
+          <div class="art-circle circle-one"></div><div class="art-circle circle-two"></div>
+          <div class="backpack"><div class="bag-handle"></div><div class="bag-pocket"><span>+</span></div><div class="bag-strap left"></div><div class="bag-strap right"></div></div>
+          <div class="shield"><span>✓</span></div>
+          <div class="art-label"><span class="label-check">✓</span> Prepared at home</div>
+        </div>
+      </div>
+
+      <div class="notice notice-warning">
+        <span class="notice-icon" aria-hidden="true">!</span>
+        <div><strong>Important safety note</strong><p>Emergency numbers and evacuation center details shown in this demo are sample placeholders. Verify all local information with your LGU, barangay, or official emergency-management office before relying on it.</p></div>
+      </div>
+
+      <div class="section-heading">
+        <div><span class="eyebrow">YOUR PREPAREDNESS TOOLKIT</span><h2>Small steps can make a big difference.</h2></div>
+        <a class="text-link" href="#dashboard">View dashboard →</a>
+      </div>
+      <div class="feature-grid">
+        <a class="feature-card" href="#checklist"><span class="feature-icon blue">✓</span><h3>Pack a go-bag</h3><p>Track essential supplies for your household.</p><span class="card-arrow">Open checklist ↗</span></a>
+        <a class="feature-card" href="#guides"><span class="feature-icon pale">⌂</span><h3>Learn safety basics</h3><p>Review practical steps for common hazards.</p><span class="card-arrow">Read guides ↗</span></a>
+        <a class="feature-card" href="#centers"><span class="feature-icon blue">⌖</span><h3>Plan where to go</h3><p>Keep verified evacuation information in one place.</p><span class="card-arrow">View directory ↗</span></a>
+        <a class="feature-card" href="#contacts"><span class="feature-icon pale">☎</span><h3>Know who to call</h3><p>Organize important local emergency contacts.</p><span class="card-arrow">View contacts ↗</span></a>
+      </div>
+      <div class="tip-banner"><div class="tip-symbol">✦</div><div><strong>HandaHub tip</strong><p>Talk with your household about a meeting place, an out-of-area contact, and how everyone will reconnect if you get separated.</p></div><a href="#guides" class="text-link">Learn more →</a></div>
+    </section>
+
+    <section id="dashboard" class="page-section" hidden>
+      <div class="page-title"><span class="eyebrow">YOUR HOME OVERVIEW</span><h1>Preparedness dashboard</h1><p>See your go-bag progress and keep your household plan moving forward.</p></div>
+      <div class="dashboard-grid">
+        <article class="panel score-panel">
+          <div class="panel-top"><div><span class="eyebrow">GO-BAG PROGRESS</span><h2>Household readiness</h2></div><span class="status-pill" id="score-status">Getting started</span></div>
+          <div class="score-content"><div class="progress-ring" id="progress-ring"><div><strong id="score-number">0%</strong><span>items ready</span></div></div><div class="score-details"><strong id="score-count">0 of 12 items checked</strong><p>Check off the supplies you already have prepared. Your score updates automatically.</p><a class="button button-primary" href="#checklist">Continue checklist →</a></div></div>
+          <div class="progress-track"><span id="progress-bar"></span></div>
+        </article>
+        <article class="panel quick-panel"><span class="eyebrow">QUICK ACTIONS</span><h2>Plan ahead</h2><a class="quick-link" href="#checklist"><span>✓</span><div><strong>Review your go-bag</strong><small>Check essential supplies</small></div><b>→</b></a><a class="quick-link" href="#guides"><span>⌂</span><div><strong>Read a safety guide</strong><small>Learn before an emergency</small></div><b>→</b></a><a class="quick-link" href="#contacts"><span>☎</span><div><strong>Review contact details</strong><small>Confirm official numbers</small></div><b>→</b></a></article>
+      </div>
+      <div class="section-heading"><div><span class="eyebrow">NEXT STEPS</span><h2>Build your household plan</h2></div></div>
+      <div class="two-column">
+        <article class="panel"><span class="feature-icon pale">⌖</span><h3>Choose a meeting place</h3><p>Agree on a safe place to meet if your household is separated. Write down the location and make sure everyone knows how to get there.</p><a class="text-link" href="#guides">Review planning tips →</a></article>
+        <article class="panel"><span class="feature-icon blue">☎</span><h3>Confirm local information</h3><p>Replace demo contact and evacuation details with information verified through your barangay or local government.</p><a class="text-link" href="#contacts">Review contacts →</a></article>
+      </div>
+    </section>
+
+    <section id="checklist" class="page-section" hidden>
+      <div class="page-title"><span class="eyebrow">PACK THE ESSENTIALS</span><h1>Emergency go-bag checklist</h1><p>Use this checklist to track supplies for your household. Needs may vary by age, health, location, and hazard.</p></div>
+      <div class="notice notice-info"><span class="notice-icon">i</span><div><strong>Make it fit your household</strong><p>Prepare enough supplies for household members and follow official local guidance. Check expiration dates and refresh stored supplies regularly.</p></div></div>
+      <div class="checklist-layout">
+        <div class="panel checklist-panel">
+          <div class="list-toolbar"><div><h2>Your supplies</h2><p id="checklist-summary">0 of 12 items ready</p></div><button id="reset-checklist" class="button button-secondary button-small">Reset checklist</button></div>
+          <div id="checklist-items" class="checklist-items"></div>
+        </div>
+        <aside class="panel checklist-aside"><div class="aside-illustration">🎒</div><span class="eyebrow">YOUR PROGRESS</span><div class="mini-score"><strong id="checklist-percent">0%</strong><span>complete</span></div><div class="progress-track"><span id="checklist-progress"></span></div><p id="checklist-message">Start by checking the items you already have.</p><hr><h3>Remember to include</h3><ul class="simple-list"><li>Supplies for each household member</li><li>Personal medicines and essential documents</li><li>Items for infants, older adults, or pets if needed</li></ul></aside>
+      </div>
+    </section>
+
+    <section id="guides" class="page-section" hidden>
+      <div class="page-title"><span class="eyebrow">KNOW WHAT TO DO</span><h1>Disaster safety guides</h1><p>Review basic preparedness reminders. Always follow current instructions from official authorities during an actual emergency.</p></div>
+      <div class="guide-grid">
+        <article class="guide-card"><div class="guide-art typhoon-art"><span>🌧️</span><small>HEAVY RAIN & WIND</small></div><div class="guide-body"><span class="guide-tag">BEFORE · DURING · AFTER</span><h2>Typhoon</h2><p>Prepare for strong winds, heavy rain, flooding, and possible power interruptions.</p><details><summary>Read safety reminders</summary><ul><li>Monitor official weather bulletins and local advisories.</li><li>Secure loose outdoor items and prepare essential supplies before conditions worsen.</li><li>Stay indoors away from windows during strong winds.</li><li>Evacuate promptly if authorities instruct you to do so.</li><li>Avoid downed power lines and report hazards to the proper authorities.</li></ul></details></div></article>
+        <article class="guide-card"><div class="guide-art flood-art"><span>🌊</span><small>RISING WATER</small></div><div class="guide-body"><span class="guide-tag">BEFORE · DURING · AFTER</span><h2>Flood</h2><p>Know your route to higher ground and avoid moving water.</p><details><summary>Read safety reminders</summary><ul><li>Know whether your area is flood-prone and identify safer routes.</li><li>Move to higher ground when instructed or when water rises dangerously.</li><li>Never walk, swim, or drive through floodwater.</li><li>Keep away from electrical equipment and submerged wires.</li><li>Return only when authorities say it is safe.</li></ul></details></div></article>
+        <article class="guide-card"><div class="guide-art quake-art"><span>🏠</span><small>GROUND SHAKING</small></div><div class="guide-body"><span class="guide-tag">BEFORE · DURING · AFTER</span><h2>Earthquake</h2><p>Practice protective actions and prepare for possible aftershocks.</p><details><summary>Read safety reminders</summary><ul><li>Secure heavy furniture and identify safer places in each room.</li><li>During shaking, Drop, Cover, and Hold On.</li><li>If indoors, stay inside and protect your head and neck.</li><li>After shaking stops, check for injuries and hazards before moving.</li><li>Be prepared for aftershocks and follow official instructions.</li></ul></details></div></article>
+        <article class="guide-card"><div class="guide-art fire-art"><span>🔥</span><small>FIRE SAFETY</small></div><div class="guide-body"><span class="guide-tag">PREVENT · ESCAPE · REPORT</span><h2>Fire</h2><p>Plan escape routes and leave quickly if a fire occurs.</p><details><summary>Read safety reminders</summary><ul><li>Keep exits clear and identify two ways out where possible.</li><li>If there is a fire, leave immediately and stay low if smoke is present.</li><li>Never use elevators during a fire.</li><li>Once outside, stay out and call the verified local fire service.</li><li>Do not re-enter until authorities say it is safe.</li></ul></details></div></article>
+      </div>
+      <p class="source-note">These are general educational reminders, not a substitute for official instructions or professional training. Verify current guidance with your local disaster risk reduction and management office and relevant government agencies.</p>
+    </section>
+
+    <section id="centers" class="page-section" hidden>
+      <div class="page-title"><span class="eyebrow">PLAN WHERE TO GO</span><h1>Evacuation center directory</h1><p>Keep details for designated safe locations in your community. Confirm locations and accessibility with local authorities.</p></div>
+      <div class="notice notice-warning"><span class="notice-icon">!</span><div><strong>Demo information — not for emergency navigation</strong><p>The entries below are sample placeholders, not real or verified evacuation centers. Replace them with current details from your LGU or barangay before use.</p></div></div>
+      <div class="directory-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input id="center-search" type="search" placeholder="Search center name or area" aria-label="Search evacuation centers"></label><span class="result-count" id="center-count">3 sample entries</span></div>
+      <div id="center-list" class="directory-grid"></div>
+      <div class="panel add-panel"><div><h2>Add a verified local center</h2><p>Only add information after confirming it with the responsible local authority. Data is saved in this browser only.</p></div><form id="center-form" class="stack-form"><label>Center name<input name="name" required maxlength="80" placeholder="Verified center name"></label><label>Address / area<input name="address" required maxlength="120" placeholder="Street, barangay, municipality"></label><label>Contact details<input name="contact" maxlength="80" placeholder="Verified phone or office"></label><button class="button button-primary" type="submit">Add center</button></form></div>
+    </section>
+
+    <section id="contacts" class="page-section" hidden>
+      <div class="page-title"><span class="eyebrow">KEEP IMPORTANT DETAILS CLOSE</span><h1>Emergency contacts</h1><p>Store important contacts for your household and local services.</p></div>
+      <div class="notice notice-warning"><span class="notice-icon">!</span><div><strong>All contact entries are sample placeholders</strong><p>Do not call these demo entries. Replace them with verified official contact details for your area. This site does not contact emergency services for you.</p></div></div>
+      <div class="directory-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input id="contact-search" type="search" placeholder="Search service or contact" aria-label="Search emergency contacts"></label><span class="result-count" id="contact-count">4 sample entries</span></div>
+      <div id="contact-list" class="contact-grid"></div>
+      <div class="panel add-panel"><div><h2>Add a verified contact</h2><p>Use only checked and current details from an official source. Entries are stored locally in this browser.</p></div><form id="contact-form" class="stack-form"><label>Service / contact name<input name="name" required maxlength="80" placeholder="Official service name"></label><label>Phone number or contact detail<input name="phone" required maxlength="50" placeholder="Verified number or detail"></label><label>Notes<input name="notes" maxlength="100" placeholder="Office, hours, or source"></label><button class="button button-primary" type="submit">Add contact</button></form></div>
+    </section>
+
+    <section id="about" class="page-section" hidden>
+      <div class="page-title"><span class="eyebrow">ABOUT THE PROJECT</span><h1>Prepared communities start with informed households.</h1><p>HandaHub is a student web application concept designed to make basic disaster preparedness easier to organize and understand.</p></div>
+      <div class="about-layout"><div class="about-visual"><div class="about-badge">H</div><div class="about-orbit orbit-a"></div><div class="about-orbit orbit-b"></div><span class="about-caption">Be Ready. Stay Safe.</span></div><div class="about-copy"><span class="eyebrow">OUR PURPOSE</span><h2>Make preparation easier to start.</h2><p>The application brings household checklists, general safety reminders, and community contact directories together in one simple interface.</p><p>It is intended for educational planning. It does not provide live alerts, verify submitted information automatically, or replace official emergency services.</p><h3>Core objectives</h3><ul class="simple-list"><li>Help households track essential emergency supplies.</li><li>Encourage users to learn basic hazard safety practices.</li><li>Organize local evacuation and emergency contact information.</li><li>Promote verification of details with official authorities.</li></ul></div></div>
+      <div class="panel tech-panel"><span class="eyebrow">TECHNOLOGY USED</span><div class="tech-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Browser localStorage</span></div><p>Data added in this demo stays in the current browser on this device. It is not shared with other users and may be lost if browser data is cleared.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="footer-brand"><span class="brand-mark">H</span><div><strong>HandaHub</strong><small>Be Ready. Stay Safe.</small></div></div><p>Preparedness education and planning tools.</p><p class="footer-warning">Demo only: verify local emergency contacts and evacuation information with official authorities.</p><span>© <span id="current-year"></span> HandaHub · Student project</span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
