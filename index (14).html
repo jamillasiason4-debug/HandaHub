@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HandaHub | Disaster Preparedness</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+  <a href="#home" class="logo">🛡️ HandaHub</a>
+  <button id="menuBtn" class="menu-btn">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#checklist">Go-Bag Checklist</a>
+    <a href="#guides">Safety Guides</a>
+    <a href="#centers">Evacuation Centers</a>
+    <a href="#contacts">Emergency Contacts</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <span class="tag">PREPARED TODAY, SAFER TOMORROW</span>
+      <h1>Be Ready.<br><span>Stay Safe.</span></h1>
+      <p>
+        HandaHub helps communities prepare for disasters through
+        safety guides, emergency checklists, and preparedness tools.
+      </p>
+      <a class="primary-btn" href="#checklist">Start Preparing →</a>
+    </div>
+    <div class="hero-icon">🏠</div>
+  </section>
+
+  <section class="container">
+    <div class="section-heading">
+      <span class="tag">YOUR PREPAREDNESS</span>
+      <h2>Readiness Dashboard</h2>
+      <p>Track your emergency preparation progress.</p>
+    </div>
+
+    <div class="stats">
+      <article class="stat-card">
+        <span>🎒</span>
+        <h3 id="progress">0%</h3>
+        <p>Go-Bag Readiness</p>
+      </article>
+      <article class="stat-card">
+        <span>✅</span>
+        <h3 id="completed">0/12</h3>
+        <p>Items Prepared</p>
+      </article>
+      <article class="stat-card">
+        <span>📘</span>
+        <h3>4</h3>
+        <p>Safety Guides</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="checklist" class="container section">
+    <div class="section-heading">
+      <span class="tag">EMERGENCY ESSENTIALS</span>
+      <h2>Go-Bag Checklist</h2>
+      <p>Check the items you already have ready.</p>
+    </div>
+    <div class="progress-track">
+      <div id="progressBar"></div>
+    </div>
+    <p id="progressText">0 of 12 items prepared</p>
+    <div id="checklistItems" class="checklist-grid"></div>
+    <button id="resetChecklist" class="secondary-btn">Reset Checklist</button>
+  </section>
+
+  <section id="guides" class="section section-light">
+    <div class="container">
+      <div class="section-heading">
+        <span class="tag">KNOW WHAT TO DO</span>
+        <h2>Disaster Safety Guides</h2>
+        <p>Remember these basic safety steps during emergencies.</p>
+      </div>
+      <div class="guide-grid">
+        <article class="guide-card">
+          <div class="guide-icon">🌀</div>
+          <h3>Typhoon</h3>
+          <p>Monitor official weather updates, prepare supplies, and stay indoors when conditions become dangerous.</p>
+        </article>
+        <article class="guide-card">
+          <div class="guide-icon">🌊</div>
+          <h3>Flood</h3>
+          <p>Move to higher ground when needed. Never walk or drive through floodwater.</p>
+        </article>
+        <article class="guide-card">
+          <div class="guide-icon">🌎</div>
+          <h3>Earthquake</h3>
+          <p>Drop, Cover, and Hold On. After shaking stops, move carefully to a safe open area if necessary.</p>
+        </article>
+        <article class="guide-card">
+          <div class="guide-icon">🔥</div>
+          <h3>Fire</h3>
+          <p>Leave the building using a safe exit. Do not use elevators, and call local emergency services.</p>
+        </article>
+      </div>
+      <p class="notice">Follow instructions from your local authorities and emergency responders.</p>
+    </div>
+  </section>
+
+  <section id="centers" class="container section">
+    <div class="section-heading">
+      <span class="tag">COMMUNITY INFORMATION</span>
+      <h2>Evacuation Centers</h2>
+      <p>Add and manage evacuation-center information for your community.</p>
+    </div>
+
+    <form id="centerForm" class="form-card">
+      <label for="centerName">Center name</label>
+      <input id="centerName" required maxlength="100" placeholder="e.g. Community Covered Court">
+
+      <label for="centerAddress">Address or location</label>
+      <input id="centerAddress" required maxlength="200" placeholder="Enter the location">
+
+      <label for="centerCapacity">Capacity (people)</label>
+      <input id="centerCapacity" type="number" min="1" max="1000000" required placeholder="e.g. 200">
+
+      <button class="primary-btn" type="submit">Add Center</button>
+    </form>
+
+    <input id="centerSearch" class="search" placeholder="Search evacuation centers...">
+    <div id="centerList" class="record-list"></div>
+  </section>
+
+  <section id="contacts" class="section section-light">
+    <div class="container">
+      <div class="section-heading">
+        <span class="tag">IMPORTANT NUMBERS</span>
+        <h2>Emergency Contacts</h2>
+        <p>Save useful contact information for quick reference.</p>
+      </div>
+
+      <form id="contactForm" class="form-card">
+        <label for="contactName">Agency or contact name</label>
+        <input id="contactName" required maxlength="100" placeholder="e.g. Local Disaster Office">
+
+        <label for="contactNumber">Phone number</label>
+        <input id="contactNumber" required maxlength="40" placeholder="Enter verified phone number">
+
+        <label for="contactNote">Additional information</label>
+        <input id="contactNote" maxlength="150" placeholder="Optional notes">
+
+        <button class="primary-btn" type="submit">Add Contact</button>
+      </form>
+
+      <input id="contactSearch" class="search" placeholder="Search emergency contacts...">
+      <div id="contactList" class="record-list"></div>
+      <p class="notice">Verify emergency numbers with official local sources. This app does not automatically contact responders.</p>
+    </div>
+  </section>
+
+  <section id="about" class="container section">
+    <div class="about-box">
+      <span class="tag">ABOUT THE PROJECT</span>
+      <h2>Prepared Communities Start Here.</h2>
+      <p>
+        HandaHub is a disaster preparedness web application designed
+        to help students and community members organize emergency
+        supplies, learn basic safety practices, and keep useful
+        community information in one place.
+      </p>
+      <p><strong>Important:</strong> Saved checklist items and records stay in this browser on this device. They are not automatically shared with other users.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 HandaHub | Community Disaster Preparedness</p>
+  <p>Stay informed. Stay prepared. Stay safe.</p>
+</footer>
+
+</body>
+</html>
